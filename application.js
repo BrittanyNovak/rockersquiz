@@ -1,23 +1,23 @@
-function makeMessage() {
-	var v1, v2, v3;
-	v1 = $("#one");
-	v2 = $("#two");
-	v3 = $("#three");
+function printOurForm() {
+	var firstname;
+	var lastname;
+	var address;
+	var phonenumber;
+	var phonetype;
 	
-	var alertMessage= "";
-	if(v1.val() == ""){ alertMessage += "Missing First Name, "; v1.addClass("missing"); }
-		else { v1.removeClass("missing"); }
-	if(v2.val() == "") { alertMessage += "Missing Last Name, "; v2.addClass("missing");}
-		else { v2.removeClass("missing"); }
-	if(v3.val() == "") { alertMessage += "Missing Phone Number, "; v3.addClass("missing");}
-		else {v3.removeClass("missing"); }
-		
-	if(alertMessage != ""){
-		alert("You are missing\n" + alertMessage);
-	} else {
-		var message = "Thank You " + v1.val() + " " + v2.val() + "<br>";
-		message += "whose phone number is " + v3.val() + "<br>";
-		$("#welcomeMessage").append(message);
-	}
-		
+	firstname =  document.getElementById("one");
+	lastname = document.getElementById("two");
+	address =  document.getElementById("three");
+	phonenumber = document.getElementById("four");
+	phonetype = document.getElementsByName("purpose");
+	
+	printOut  = document.getElementById ("printStuffHere");
+	
+	printOut.innerHTML = "hello " + firstname.value + " " + lastname.value + "<br>";
+	printOut.innerHTML += "whose address is " + address.value + "<br>";
+	printOut.innerHTML  += "and your phone number is " + phonenumber.value + "<br>";
+	printOut.innerHTML += "and this is a " + phonetype[0].value + " phone" +"<br>";
+	
 }
+
+		
