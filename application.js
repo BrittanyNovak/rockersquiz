@@ -12,10 +12,12 @@ function makeMessage() {
 	if(v3.val() == "") { alertMessage += "Missing Phone Number, "; v3.addClass("missing");}
 		else {v3.removeClass("missing"); }
 		
-	if(alertMessage != ""){alert("You are missing\n" + alertMessage);}
-		else {
-			var message = "Thank You " + v1.val() + " " + v2.val() + "<br>";
-			message += "whose phone number is " + v3.val() + "<br>";
-			$("#welcomeMessage").append(message);}
+	if(alertMessage != ""){
+		alert("You are missing\n" + alertMessage);
+	} else {
+		var message = "Thank You " + v1.val() + " " + v2.val() + "<br>";
+		message += "whose phone number is " + v3.val() + "<br>";
+		$("#welcomeMessage").append(message);
+	}
 		
 }
