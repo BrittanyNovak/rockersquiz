@@ -9,9 +9,9 @@
 		<h1>Please fill out the form below!</h1>
 		<div id="submitForm">
 		<h2>Information:</h2>
-		<div><label>First Name:<input type="text"></label></div><br>
-		<div><label>Last Name:<input type="text"></label></div><br>
-		<div><label>Phone Number:<input type="text"></label></div><br>
+		<div><label>First Name:<input type="text" id="one"></label></div><br>
+		<div><label>Last Name:<input type="text" id="two"></label></div><br>
+		<div><label>Phone Number:<input type="text" id="three"></label></div><br>
 		<div><label>Pick One:
 		
 		<select name="purpose">
@@ -19,6 +19,12 @@
 		<option value="personal">Personal</option>
 		</select>
 		</label></div>
+		</div>
+		
+		<input type="button" name="submit" value="Submit" onClick="makeMessage();">
+		
+		<div>
+		<div id="welcomeMessage();">
 		</div>
 	</body>
 </html>
